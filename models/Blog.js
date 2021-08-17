@@ -20,7 +20,7 @@ Blog.init(
         allowNull: false,
         unique: true,
         validate: {
-            len: [8],
+            len: [30],
         },
     },
     user_id: {
@@ -42,7 +42,7 @@ Blog.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Blog',
+        modelName: 'blog',
     }
 );
 
