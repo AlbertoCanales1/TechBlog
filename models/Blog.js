@@ -31,10 +31,12 @@ Blog.init(
             key: 'id',
         }
     },
-    date_time : {
-        type: DataTypes.TIME,
+    date_time: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        defaultValue: DataTypes.NOW,
+    },
 
-    }
 },
     {
         

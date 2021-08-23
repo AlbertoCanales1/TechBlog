@@ -4,19 +4,19 @@ const withAuth = require('../utils/auth');
 
 const path = require('path')
 
-router.get('/',withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     try{
         const blogData = await Blog.findAll({
             include : [
                 {
                     model: User,
-                    attributes: ['name']
+                    attributes: ['user_name']
                 },
             ],
         });
 
 const blogs = blogData.map((blog) => blog.get({ plain: true }))
-
+console.log(blogs)
 res.render('homepage', {
     blogs,
     logged_in: req.sessions.logged_in
@@ -32,7 +32,7 @@ router.get('/blog/:id', async (req, res) => {
             include: [
                 {
                     model: User,
-                    attributes: ['name'],
+                    attributes: ['user_name'],
                 },
             ],
         });
@@ -47,7 +47,7 @@ router.get('/blog/:id', async (req, res) => {
     }
 });
 
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/profile', async (req, res) => {
 try {
     const user = userData.get({ plain: true });
 

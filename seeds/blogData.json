@@ -3,18 +3,18 @@
         "post_title" : "Hello World",
         "contents": "A simple blog introducing beginning programmers",
         "user_id" : 432567,
-        "date_time": 1500
+        "date_time": "12/08/1998"
     },
     {
         "post_title" : "Dogs are better!",
         "contents": "A blog that explains why dogs are better than cats",
         "user_id" : 442587,
-        "date_time": 1700
+        "date_time": "12/07/1998"
     },
     {
         "post_title" : "Good reads",
         "contents": "A blog dedicated to giving the best places to buy books",
         "user_id" : 532867,
-        "date_time": 2100
+        "date_time": "12/02/1998"
     }
 ]

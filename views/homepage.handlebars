@@ -1,18 +1,8 @@
-<!-- Loop over each object in the projects array -->
-{{#each blogs as |blog| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      
-      <a href="/blog/{{blog.id}}">{{blog.post_title}}</a>
-    </h2>
-    
-    <p>Created by {{blog.user_id}} on {{date_time}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{blog.contents}}
-    </p>
-  </div>
-</div>
+<div class="menu-container homepage">
+      {{#each blogs }}
+         <a href="/blog/{{id}}">{{post_title}}</a>
+         <hr style="border: 3px solid rgb(6, 53, 35); border-radius: 5px;" />
+        <h3> <p>{{contents}}</p></h3>
+         <p>--Created by {{user.user_name}} on {{date_time}}</p>
 {{/each}}
+</div>
