@@ -48,8 +48,14 @@ router.get('/blog/:id', async (req, res) => {
 });
 
 router.get('/profile', async (req, res) => {
+    console.log("profile route hit")
 try {
-    const user = userData.get({ plain: true });
+    const userData = await User.findByPk(req.session.user_id,{
+        attrubutes: {exclude: ['password']},
+        include: [{model: Blog}],
+    });
+        console.log(req.session)
+       const user = userData.get({ plain: true });
 
     res.render('profile', {
         ...user,
@@ -57,6 +63,7 @@ try {
     });
 
 } catch (err) {
+    console.log(err)
     res.status(500).json(err);
 }
 });
