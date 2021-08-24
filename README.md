@@ -23,3 +23,5 @@ $ mysql2
 $ sequelize
 
 ```
+## Demo of the application
+
