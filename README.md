@@ -24,4 +24,5 @@ $ sequelize
 
 ```
 ## Demo of the application
+![hmmwk gif](https://user-images.githubusercontent.com/81657151/130684697-aa09f818-088f-45e8-a68d-cba9f363623f.gif)
 
