@@ -1,14 +1,15 @@
 const newPostHandler = async (event) => {
     event.preventDefault();
-}
 
-const title = document.querySelector('#blog-title').value.trim();
-const content = document.querySelector('#blog-content').value.trim();
 
-if (title && content){
+const blog_title = document.querySelector('#blog-title').value.trim();
+const contents = document.querySelector('#blog-contents').value.trim();
+
+if (blog_title && contents){
+    console.log("err")
     const response =  fetch('/api/blogs', {
         method: 'POST',
-        body: JSON.stringify({title, content}),
+        body: JSON.stringify({blog_title, contents}),
         headers: {
             'Content-Type': 'application/json',
         },
@@ -20,6 +21,8 @@ if (title && content){
         alert('Cannot create blog');
     }
 };
+}
+
 
 const delButtonHandler = async (event) => {
     if(event.target.hasAttribute('data-id')){
