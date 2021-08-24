@@ -20,7 +20,7 @@ Blog.init(
         allowNull: false,
         unique: true,
         validate: {
-            len: [30],
+            len: [3],
         },
     },
     user_id: {
