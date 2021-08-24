@@ -57,7 +57,7 @@ try {
         console.log(req.session)
        const user = userData.get({ plain: true });
 
-    res.render('profile', {
+    res.render('/profile', {
         ...user,
         logged_in: true
     });

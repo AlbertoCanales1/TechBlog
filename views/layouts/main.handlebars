@@ -12,18 +12,15 @@
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        
-        <a href="/">The tech blog</a>
-      </h1>
+      <h1>The tech blog</h1>
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <script>console.log("log in route hit")</script>
-        <a href="/js/profile.js">profile</a> |
+        {{!-- <script>?("log in route hit")</script> --}}
+        {{!-- <a href="/js/profile.js">profile</a> | --}}
         <button class="no-button" id="logout">logout</button>
         {{else}}
-        <a href="/js/login.js">login</a>
+        <a href="/login">login</a>
         {{/if}}
       </nav>
     </header>
